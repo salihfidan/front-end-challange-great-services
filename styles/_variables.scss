@@ -9,18 +9,20 @@ $grid-breakpoints: (
 );
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1340px,
+  sm: 616px,
+  md: 808px,
+  lg: 1032px,
+  xl: 1240px,
+  xxl: 1440px,
 );
+
+$grid-gutter-width: 40px;
 
 // sizes
 $mobile-navbar-height: 70px;
 $default-mobile-container-padding: 20px;
 $desktop-navbar-height: 100px;
-$container-max-width: 1400px;
+$container-max-width: 1440px;
 
 // colors
 $color-background: #e5e5e5;

@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles['header--scrolled'] : ''} ${isMobileMenuOpened ? styles['header--menu-opened'] : ''}`}>
-      <div className={styles['header__inner']}>
+      <div className={`container-xxl ${styles['header__inner']}`}>
         <div className={styles['header__logo']}>
           <Image src={logo} alt="GREAT Services" layout="fill" />
         </div>

@@ -9,8 +9,7 @@ import styles from '../styles/pages/Home.module.scss';
 
 const Home = () => {
   const pageTitle = 'Services';
-  const pageDescription =
-    'Experts covering your home’s needs from the right light bulb shade to remodeling.';
+  const pageDescription = 'Experts covering your home’s needs from the right light bulb shade to remodeling.';
 
   return (
     <div>
