@@ -8,14 +8,20 @@ import Layout from '../components/Layout';
 import styles from '../styles/pages/Home.module.scss';
 
 const Home = () => {
+  const pageTitle = 'Services';
+  const pageDescription =
+    'Experts covering your home’s needs from the right light bulb shade to remodeling.';
+
   return (
     <div>
       <Head>
-        <title>Services</title>
-        <meta name="description" content="Services page" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>Home Page</Layout>
+      <Layout pageTitle={pageTitle} pageDescription={pageDescription}>
+        <div style={{ height: '101vh' }}></div>
+      </Layout>
     </div>
   );
 };

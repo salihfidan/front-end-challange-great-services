@@ -1,7 +1,12 @@
+@import './variables';
 @import './vendor';
 @import './fonts';
 
 html,
 body {
   font-family: CircularStd, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color-dark;
 }
