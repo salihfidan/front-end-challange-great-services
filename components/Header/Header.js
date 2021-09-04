@@ -11,6 +11,7 @@ import linkedin from '../../public/img/linkedin.svg';
 
 // component styling
 import styles from './Header.module.scss';
+import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,8 +28,32 @@ const Header = () => {
   return (
     <header className={`${styles.header} ${isScrolled ? styles['header--scrolled'] : ''} ${isMobileMenuOpened ? styles['header--menu-opened'] : ''}`}>
       <div className={styles['header__inner']}>
-        <Image src={logo} alt="GREAT Services" />
-        <button className={styles['header__button']} onClick={() => setIsMobileMenuOpened(!isMobileMenuOpened)}>
+        <div className={styles['header__logo']}>
+          <Image src={logo} alt="GREAT Services" layout="fill" />
+        </div>
+        <nav className={`${styles['header__nav']} d-none d-lg-block`}>
+          <ul className={styles['header__nav-list']}>
+            <li className={styles['header__nav-item']}>
+              <a href="#" className={styles['header__nav-link']}>
+                How It Works
+              </a>
+            </li>
+            <li className={styles['header__nav-item']}>
+              <a href="#" className={styles['header__nav-link']}>
+                Advantages
+              </a>
+            </li>
+            <li className={styles['header__nav-item']}>
+              <a href="#" className={`${styles['header__nav-link']} ${styles['header__nav-link--active']}`}>
+                Services
+              </a>
+            </li>
+            <li className={styles['header__nav-item']}>
+              <ButtonPrimary href="#">Apply to be an expert</ButtonPrimary>
+            </li>
+          </ul>
+        </nav>
+        <button className={`${styles['header__button']} d-lg-none`} onClick={() => setIsMobileMenuOpened(!isMobileMenuOpened)}>
           <span></span>
           <span></span>
           <span></span>

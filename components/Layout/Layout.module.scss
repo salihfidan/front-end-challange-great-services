@@ -2,20 +2,33 @@
 
 .layout {
   &__hero {
-    padding: calc(40px + #{$mobile-navbar-height})
-      $default-mobile-container-padding 30px $default-mobile-container-padding;
+    padding: calc(40px + #{$mobile-navbar-height}) $default-mobile-container-padding 30px $default-mobile-container-padding;
     text-align: center;
     background: $gradient-hero;
+
+    @include media-breakpoint-up('lg') {
+      padding: calc(75px + #{$desktop-navbar-height}) $default-mobile-container-padding 50px $default-mobile-container-padding;
+      background: $gradient-hero-desktop;
+    }
   }
 
   &__hero-title {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.3;
+
+    @include media-breakpoint-up('lg') {
+      font-size: 64px;
+      line-height: 1.2;
+    }
   }
 
   &__hero-text {
     margin-top: 15px;
     font-weight: 300;
+
+    @include media-breakpoint-up('lg') {
+      font-size: 22px;
+    }
   }
 }
