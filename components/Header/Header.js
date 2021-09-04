@@ -14,7 +14,7 @@ import styles from './Header.module.scss';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(true);
+  const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 
   useScrollPosition(
     ({ currPos }) => {
