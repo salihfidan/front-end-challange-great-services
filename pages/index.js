@@ -75,10 +75,38 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className={styles['features__email-area']}></div>
+          </div>
+          <div className={styles['features__email-area']}>
+            <div className={`container-xxl ${styles['features__email-area-container']}`}>
+              <div className="row">
+                <div className="col-md-6">
+                  <div className={styles['features__email-title']}>
+                    Stay up to speed on the
+                    <br />
+                    latest at Great.
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <form className={styles['features__email-form']}>
+                    <input type="email" name="email" className={styles['features__email-input']} placeholder="jsmith@example.com" required />
+                    <div className={styles['features__email-checkbox-area']}>
+                      <input type="checkbox" id="stayInformed" name="stayInformed" className={styles['features__email-checkbox']} />
+                      <label htmlFor="stayInformed" className={styles['features__email-checkbox-label']}>
+                        Additionally, I’d like to stay informed about local events
+                      </label>
+                    </div>
+                    <button type="submit" className={styles['features__email-submit']}>
+                      Subscribe
+                    </button>
+                    <div className={styles['features__email-terms-of-service']}>
+                      By submitting this form, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>.
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        {/* <div style={{ height: '101vh' }}></div> */}
       </Layout>
     </div>
   );
