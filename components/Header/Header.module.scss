@@ -37,6 +37,11 @@
     margin: 0 auto;
     transition: all 0.2s;
 
+    @include media-breakpoint-up('md') {
+      padding-left: $container-padding-desktop;
+      padding-right: $container-padding-desktop;
+    }
+
     @include media-breakpoint-up('lg') {
       height: $desktop-navbar-height;
     }
