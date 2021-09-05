@@ -1,0 +1,56 @@
+@import '../../styles/modules';
+
+.features {
+  display: flex;
+  flex-direction: column;
+  background: $gradient-fade, $gradient-footer;
+
+  &__items {
+    padding: 40px 0;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__item-icon-area {
+    flex-shrink: 0;
+    display: flex;
+    font-size: 30px;
+  }
+
+  &__item-text-area {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+
+    @include media-breakpoint-up('xl') {
+      margin-left: 20px;
+    }
+  }
+
+  &__item-title {
+    font-size: 18px;
+    font-weight: 600;
+
+    @include media-breakpoint-up('xl') {
+      font-size: 21px;
+    }
+  }
+
+  &__item-text {
+    margin-top: 15px;
+    padding-right: 40px;
+    font-size: 14px;
+    font-weight: 300;
+
+    @include media-breakpoint-up('xl') {
+      margin-top: 20px;
+      padding-right: 25px;
+      font-size: 16px;
+    }
+  }
+
+  &__email-area {
+  }
+}
