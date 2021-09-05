@@ -9,7 +9,7 @@ import ServiceCard from '../ServiceCard';
 
 const InfiniteServices = () => {
   const PAGE_SIZE = 100;
-  const { data, error, size, setSize } = useSWRInfinite((index) => `api/services/${(index + 1) * PAGE_SIZE}/${PAGE_SIZE}`, fetcher);
+  const { data, error, size, setSize } = useSWRInfinite((index) => `api/services/${index * PAGE_SIZE}/${PAGE_SIZE}`, fetcher);
 
   const services = data ? [].concat(...data) : [];
   const isLoadingInitialData = !data && !error;
