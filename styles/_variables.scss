@@ -16,17 +16,52 @@ $container-max-widths: (
   xxl: 1440px,
 );
 
-$grid-gutter-width: 40px;
+$grid-gutter-width: 20px;
+
+$spacers: (
+  6: 20px,
+  7: 40px,
+);
+
+$grid-gutter-width-row: $grid-gutter-width * 2;
+
+// @media (max-width: map-get($grid-breakpoints, sm)) {
+//   .row:not(.no-gutters) {
+//     margin-right: -$grid-gutter-width-row / 4;
+//     margin-left: -$grid-gutter-width-row / 4;
+//   }
+//   .row:not(.no-gutters) > .col,
+//   .row:not(.no-gutters) > [class*='col-'] {
+//     padding-right: $grid-gutter-width-row / 4;
+//     padding-left: $grid-gutter-width-row / 4;
+//   }
+// }
+
+// @media (max-width: map-get($grid-breakpoints, lg)) {
+//   .row:not(.no-gutters) {
+//     margin-right: -$grid-gutter-width-row / 2;
+//     margin-left: -$grid-gutter-width-row / 2;
+//   }
+//   .row:not(.no-gutters) > .col,
+//   .row:not(.no-gutters) > [class*='col-'] {
+//     padding-right: $grid-gutter-width-row / 2;
+//     padding-left: $grid-gutter-width-row / 2;
+//   }
+// }
 
 // sizes
 $mobile-navbar-height: 70px;
-$default-mobile-container-padding: 20px;
 $desktop-navbar-height: 100px;
+
+$container-padding: 20px;
+$container-padding-desktop: 40px;
+
 $container-max-width: 1440px;
 
 // colors
 $color-background: #e5e5e5;
 $color-dark: #0c0d0f;
+$color-light-teal: #438ba3;
 $color-dark-teal: #1e474f;
 $color-gray-teal: #838d90;
 $color-nav-border: rgba(#0f4552, 0.15);

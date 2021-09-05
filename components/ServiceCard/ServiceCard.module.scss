@@ -1,0 +1,90 @@
+@import '../../styles/modules';
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px 15px;
+  box-shadow: $default-box-shadow;
+  border-radius: $default-border-radius;
+  text-align: center;
+
+  @include media-breakpoint-up('md') {
+    margin: 0 10px;
+    padding: 30px 30px 25px 30px;
+  }
+
+  &__img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    @include media-breakpoint-up('md') {
+      position: absolute;
+      top: -15px;
+      left: 0;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-dark-teal;
+
+    @include media-breakpoint-up('md') {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 52px;
+      margin-bottom: 5px;
+      margin-top: 0;
+      font-size: 18px;
+    }
+  }
+
+  &__expert-area {
+  }
+
+  &__expert-title {
+    display: none;
+    font-size: 14px;
+    color: $color-light-teal;
+
+    @include media-breakpoint-up('md') {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__expert-images {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-left: 10px;
+  }
+
+  &__expert-img {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: -10px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    @include media-breakpoint-up('md') {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__expert-names {
+    margin-top: 10px;
+    font-size: 14px;
+    color: $color-gray-teal;
+  }
+}

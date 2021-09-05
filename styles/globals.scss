@@ -10,3 +10,8 @@ body {
   line-height: 1.5;
   color: $color-dark;
 }
+
+.container-xxl {
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
