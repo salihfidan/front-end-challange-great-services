@@ -20,7 +20,7 @@ const Home = () => {
       </Head>
       <Layout pageTitle={pageTitle} pageDescription={pageDescription}>
         <InfiniteServices />
-        <div style={{ height: '101vh' }}></div>
+        {/* <div style={{ height: '101vh' }}></div> */}
       </Layout>
     </div>
   );
