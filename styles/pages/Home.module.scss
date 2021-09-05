@@ -181,13 +181,13 @@
       background-repeat: no-repeat;
       background-size: 0;
       background-position: bottom left;
-      transition: background-position 0.2s, background-size 0.3s;
     }
   }
 
   &__email-checkbox:checked ~ &__email-checkbox-label::before {
     background-position: center;
     background-size: 70%;
+    transition: background-position 0.1s, background-size 0.2s;
   }
 
   &__email-submit {
