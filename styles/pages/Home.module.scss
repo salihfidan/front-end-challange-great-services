@@ -8,6 +8,10 @@
   // background: $gradient-fade, $gradient-footer;
   background: $gradient-footer;
 
+  @include media-breakpoint-up('xl') {
+    padding: 140px 0 100px 0;
+  }
+
   &::before {
     content: '';
     position: absolute;

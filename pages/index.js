@@ -29,7 +29,7 @@ const Home = () => {
           <div className={styles['features__items']}>
             <div className="container-xxl">
               <div className="row">
-                <div className="col-sm-6 col-xl-3 mb-30 mb-sm-7 mb-xl-100">
+                <div className="col-sm-6 col-xl-3 mb-30 mb-sm-7 mb-lg-100">
                   <div className={styles['features__item']}>
                     <div className={styles['features__item-icon-area']}>
                       <CheckIcon />
@@ -40,7 +40,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-6 col-xl-3 mb-30 mb-sm-7 mb-xl-100">
+                <div className="col-sm-6 col-xl-3 mb-30 mb-sm-7 mb-lg-100">
                   <div className={styles['features__item']}>
                     <div className={styles['features__item-icon-area']}>
                       <CheckIcon />
@@ -51,7 +51,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-6 col-xl-3 mb-30 mb-sm-7 mb-xl-100">
+                <div className="col-sm-6 col-xl-3 mb-30 mb-sm-7 mb-lg-100">
                   <div className={styles['features__item']}>
                     <div className={styles['features__item-icon-area']}>
                       <CheckIcon />
@@ -62,7 +62,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-6 col-xl-3 mb-30 mb-sm-7 mb-xl-100">
+                <div className="col-sm-6 col-xl-3 mb-30 mb-sm-7 mb-lg-100">
                   <div className={styles['features__item']}>
                     <div className={styles['features__item-icon-area']}>
                       <CheckIcon />
