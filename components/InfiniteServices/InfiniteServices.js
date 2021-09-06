@@ -13,24 +13,24 @@ import useIntersection from '../../hooks/useIntersection';
 import ServiceCard from '../ServiceCard';
 
 const InfiniteServices = () => {
-  const viewMoreButtonRef = useRef();
-  const inViewport = useIntersection(viewMoreButtonRef);
-  const PAGE_SIZE = 12;
-  const { data, error, size, setSize } = useSWRInfinite((index) => `https://basework-frontend-case-api.herokuapp.com/services/${index * PAGE_SIZE}/${PAGE_SIZE}`, fetcher);
+  // const viewMoreButtonRef = useRef();
+  // const inViewport = useIntersection(viewMoreButtonRef);
+  // const PAGE_SIZE = 12;
+  // const { data, error, size, setSize } = useSWRInfinite((index) => `https://basework-frontend-case-api.herokuapp.com/services/${index * PAGE_SIZE}/${PAGE_SIZE}`, fetcher);
 
-  const services = data ? [].concat(...data) : [];
-  const isLoadingInitialData = !data && !error;
-  const isLoadingMore = isLoadingInitialData || (size > 0 && data && typeof data[size - 1] === 'undefined');
-  const isEmpty = data?.[0]?.length === 0;
-  const isReachingEnd = isEmpty || (data && data[data.length - 1]?.length < PAGE_SIZE);
+  // const services = data ? [].concat(...data) : [];
+  // const isLoadingInitialData = !data && !error;
+  // const isLoadingMore = isLoadingInitialData || (size > 0 && data && typeof data[size - 1] === 'undefined');
+  // const isEmpty = data?.[0]?.length === 0;
+  // const isReachingEnd = isEmpty || (data && data[data.length - 1]?.length < PAGE_SIZE);
 
-  useEffect(() => {
-    if (inViewport && !isLoadingMore && !isReachingEnd) setSize(size + 1);
-  }, [inViewport, isLoadingMore, isReachingEnd]);
+  // useEffect(() => {
+  //   if (inViewport && !isLoadingMore && !isReachingEnd) setSize(size + 1);
+  // }, [inViewport, isLoadingMore, isReachingEnd]);
 
   return (
     <>
-      <div className="row mt-lg-6 mb-10 mb-lg-11">
+      {/* <div className="row mt-lg-6 mb-10 mb-lg-11">
         {services.map((item, i) => {
           const { title, icon, people, category } = item;
           return (
@@ -49,7 +49,7 @@ const InfiniteServices = () => {
             })
           : ''}
       </div>
-      <div ref={viewMoreButtonRef}></div>
+      <div ref={viewMoreButtonRef}></div> */}
     </>
   );
 };

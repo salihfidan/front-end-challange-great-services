@@ -19,7 +19,6 @@ const Home = () => {
       <Head>
         <title>{pageTitle} - Great</title>
         <meta name="description" content={pageDescription} />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout pageTitle={pageTitle} pageDescription={pageDescription}>
         <div className="container-xxl">

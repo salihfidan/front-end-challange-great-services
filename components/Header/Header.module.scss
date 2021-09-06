@@ -55,6 +55,14 @@
     }
   }
 
+  &--scrolled.header--menu-opened &__inner {
+    height: $mobile-navbar-height;
+
+    @include media-breakpoint-up('lg') {
+      height: $desktop-navbar-height;
+    }
+  }
+
   &__logo {
     position: relative;
     display: inline-flex;
@@ -171,10 +179,6 @@
     @include media-breakpoint-up('lg') {
       display: none;
     }
-  }
-
-  &--scrolled &--menu-opened &__mobile-menu {
-    height: calc(100vh - #{$mobile-navbar-height} + 10px);
   }
 
   &__mobile-nav {
