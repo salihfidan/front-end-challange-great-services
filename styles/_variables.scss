@@ -53,8 +53,8 @@ $color-nav-border: rgba(#0f4552, 0.15);
 $gradient-hero: linear-gradient(109.34deg, #d8e9f5 21.91%, #f3edcf 68.4%, #fad3d0 101.59%);
 $gradient-hero-desktop: linear-gradient(113.46deg, #d8e9f5 21.79%, #f4efd1 54.02%, #fad3d0 87.31%);
 
-$gradient-fade: linear-gradient(180.09deg, #ffffff 0.08%, rgba(255, 255, 255, 0) 83.55%);
-$gradient-fade-dekstop: linear-gradient(179.47deg, #ffffff 7.71%, rgba(255, 255, 255, 0.06) 41.34%);
+$gradient-fade: linear-gradient(180.09deg, #fff 0.08%, rgba(255, 255, 255, 0) 83.55%);
+$gradient-fade-dekstop: linear-gradient(179.47deg, #fff 7.71%, rgba(255, 255, 255, 0.06) 41.34%);
 
 $gradient-footer: linear-gradient(119.61deg, #d8e9f5 31.84%, #f3edcf 67.88%, #fad3d0 96.86%);
 
@@ -62,4 +62,4 @@ $gradient-footer: linear-gradient(119.61deg, #d8e9f5 31.84%, #f3edcf 67.88%, #fa
 $default-border-radius: 10px;
 
 // box-shadow
-$default-box-shadow: 0px 10px 50px rgba(#000, 0.05);
+$default-box-shadow: 0 10px 50px rgba(#000, 0.05);

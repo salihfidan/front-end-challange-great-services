@@ -1,67 +1,64 @@
 @import '../../styles/modules';
 
 .service-card {
+  align-items: center;
+  border-radius: $default-border-radius;
+  box-shadow: $default-box-shadow;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 20px 15px 15px;
-  box-shadow: $default-box-shadow;
-  border-radius: $default-border-radius;
   text-align: center;
 
   @include media-breakpoint-up('md') {
     margin: 0 10px;
-    padding: 30px 30px 25px 30px;
+    padding: 30px 30px 25px;
   }
 
   &__img-container {
     @include media-breakpoint-up('md') {
+      left: 0;
       position: absolute;
       top: -15px;
-      left: 0;
     }
   }
 
   &__img {
+    height: 40px;
     position: relative;
     width: 40px;
-    height: 40px;
 
     @include media-breakpoint-up('md') {
+      height: 60px;
       // position: absolute;
       // top: -15px;
       // left: 0;
       width: 60px;
-      height: 60px;
     }
   }
 
   &__title {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 52px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    color: $color-dark-teal;
+    display: flex;
     font-size: 14px;
     font-weight: 500;
-    color: $color-dark-teal;
+    height: 52px;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 100%;
 
     @include media-breakpoint-up('md') {
+      font-size: 18px;
       margin-bottom: 5px;
       margin-top: 0;
-      font-size: 18px;
     }
   }
 
-  &__expert-area {
-  }
-
   &__expert-title {
+    color: $color-light-teal;
     display: none;
     font-size: 14px;
-    color: $color-light-teal;
 
     @include media-breakpoint-up('md') {
       display: block;
@@ -77,23 +74,23 @@
   }
 
   &__expert-img {
-    position: relative;
+    border-radius: 15px;
     display: inline-block;
-    width: 30px;
     height: 30px;
     margin-left: -10px;
-    border-radius: 15px;
     overflow: hidden;
+    position: relative;
+    width: 30px;
 
     @include media-breakpoint-up('md') {
-      width: 40px;
       height: 40px;
+      width: 40px;
     }
   }
 
   &__expert-names {
-    margin-top: 10px;
-    font-size: 14px;
     color: $color-gray-teal;
+    font-size: 14px;
+    margin-top: 10px;
   }
 }

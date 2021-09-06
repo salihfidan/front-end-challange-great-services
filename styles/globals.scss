@@ -3,11 +3,11 @@
 
 html,
 body {
+  color: $color-dark;
   font-family: CircularStd, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  color: $color-dark;
 }
 
 .container-xxl {

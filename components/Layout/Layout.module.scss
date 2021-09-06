@@ -2,13 +2,13 @@
 
 .layout {
   &__hero {
+    background: $gradient-hero;
     padding: calc(40px + #{$mobile-navbar-height}) $container-padding 30px $container-padding;
     text-align: center;
-    background: $gradient-hero;
 
     @include media-breakpoint-up('lg') {
-      padding: calc(75px + #{$desktop-navbar-height}) $container-padding 50px $container-padding;
       background: $gradient-hero-desktop;
+      padding: calc(75px + #{$desktop-navbar-height}) $container-padding 50px $container-padding;
     }
   }
 
@@ -24,9 +24,9 @@
   }
 
   &__hero-text {
-    margin-top: 15px;
-    margin-bottom: 0;
     font-weight: 300;
+    margin-bottom: 0;
+    margin-top: 15px;
 
     @include media-breakpoint-up('lg') {
       font-size: 22px;

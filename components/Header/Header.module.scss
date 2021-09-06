@@ -1,38 +1,37 @@
 @import '../../styles/modules';
 
 .header {
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
   transition: all 0.2s;
+  width: 100%;
   z-index: 10;
 
   &--scrolled {
-    background-color: white;
-    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.07);
 
     @supports (backdrop-filter: blur(30px)) {
       backdrop-filter: blur(30px);
-      background-color: rgba($color: white, $alpha: 0.5);
+      background-color: rgba($color: #fff, $alpha: 0.5);
     }
   }
 
   &--menu-opened {
-    background-color: white;
-
+    background-color: #fff;
     @include media-breakpoint-up('lg') {
       background-color: transparent;
     }
   }
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
     // width: 100%;
     // max-width: $container-max-width;
     height: $mobile-navbar-height;
+    justify-content: space-between;
     // padding: 0 $container-padding;
     margin: 0 auto;
     transition: all 0.2s;
@@ -64,42 +63,42 @@
   }
 
   &__logo {
-    position: relative;
-    display: inline-flex;
     align-items: center;
-    width: 74px;
+    display: inline-flex;
     height: 16px;
+    position: relative;
+    width: 74px;
 
     @include media-breakpoint-up('lg') {
-      width: 110px;
       height: 24px;
+      width: 110px;
     }
   }
 
   &__button {
+    align-items: flex-end;
+    background-color: transparent;
+    border: initial;
     display: inline-flex;
     flex-direction: column;
-    align-items: flex-end;
-    padding: 10px;
     margin-right: -10px;
-    background-color: transparent;
-    border: none;
+    padding: 10px;
     transition: all 0.4s;
 
-    & > span {
-      display: inline-block;
-      width: 22px;
-      height: 2px;
+    > span {
       background-color: $color-dark;
+      display: inline-block;
+      height: 2px;
       transition: all 0.2s;
+      width: 22px;
 
       &:not(:first-child) {
         margin-top: 5px;
       }
 
       &:last-child {
-        width: 11px;
         transition: all 0s;
+        width: 11px;
       }
     }
   }
@@ -107,7 +106,7 @@
   &--menu-opened &__button {
     margin-top: 7px;
 
-    & > span {
+    > span {
       &:nth-child(1) {
         transform: rotate(45deg);
       }
@@ -124,13 +123,10 @@
     }
   }
 
-  &__nav {
-  }
-
   &__nav-list {
-    padding: 0;
-    margin: 0;
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   &__nav-item {
@@ -142,8 +138,8 @@
   }
 
   &__nav-link {
-    font-size: 18px;
     border-bottom: 1px solid transparent;
+    font-size: 18px;
     transition: all 0.2s;
 
     &,
@@ -154,21 +150,18 @@
 
     &--active,
     &:hover {
-      color: $color-dark;
       border-color: $color-dark;
-    }
-
-    &--action {
+      color: $color-dark;
     }
   }
 
   &__mobile-menu {
     height: 0;
-    padding: 0 $container-padding;
     opacity: 0;
-    visibility: hidden;
-    transition: all 0.2s, height 0.4s;
     overflow: hidden;
+    padding: 0 $container-padding;
+    transition: all 0.2s, height 0.4s;
+    visibility: hidden;
   }
 
   &--menu-opened &__mobile-menu {
@@ -181,13 +174,10 @@
     }
   }
 
-  &__mobile-nav {
-  }
-
   &__mobile-nav-list {
+    list-style: none;
     margin: 0;
     padding: 20px 0 0;
-    list-style: none;
   }
 
   &__mobile-nav-item {
@@ -197,9 +187,9 @@
   }
 
   &__mobile-nav-link {
-    padding: 20px 0;
-    display: block;
     border-bottom: 1px solid $color-nav-border;
+    display: block;
+    padding: 20px 0;
 
     &,
     &:link {
@@ -217,9 +207,9 @@
   }
 
   &__social-nav-list {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
   }
 
   &__social-nav-item {
@@ -231,12 +221,12 @@
   }
 
   &__social-nav-link {
-    display: inline-flex;
-    justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
     background-color: $color-dark;
+    border-radius: 15px;
+    display: inline-flex;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
   }
 }
