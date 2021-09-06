@@ -84,20 +84,8 @@ const Footer = () => {
           </div>
           <div className="col-7 col-lg-3 order-lg-1 mt-50 mt-lg-0">
             <div className={styles['footer__address-area']}>
-              <div className={styles['footer__address']}>
-                1447 2nd St
-                {/* <br /> */}
-                Santa Monica, CA 90401
-              </div>
-              <div className={styles['footer__address']}>
-                333 SE 2nd Ave
-                {/* <br /> */}
-                Suite 2000
-                {/* <br /> */}
-                Miami, FL 33131
-                {/* <br /> */}
-                (786) 833-9688
-              </div>
+              <div className={styles['footer__address']}>1447 2nd St Santa Monica, CA 90401</div>
+              <div className={styles['footer__address']}>333 SE 2nd Ave Suite 2000 Miami, FL 33131 (786) 833-9688</div>
             </div>
           </div>
           <div className="col-5 col-lg-3 mt-50 d-lg-none">
@@ -118,22 +106,8 @@ const Footer = () => {
           </div>
           <div className="col-7 col-lg-3 order-lg-2">
             <div className={styles['footer__address-area']}>
-              <div className={styles['footer__address']}>
-                1341 W Mockingbird Ln
-                {/* <br /> */}
-                Dallas, TX 75247
-                {/* <br /> */}
-                (214) 380-2666
-              </div>
-              <div className={styles['footer__address']}>
-                3 E Third Ave
-                {/* <br /> */}
-                Suite 200
-                {/* <br /> */}
-                San Mateo, CA 94401
-                {/* <br /> */}
-                (415) 300-2889
-              </div>
+              <div className={styles['footer__address']}>1341 W Mockingbird Ln Dallas, TX 75247 (214) 380-2666</div>
+              <div className={styles['footer__address']}>3 E Third Ave Suite 200 San Mateo, CA 94401 (415) 300-2889</div>
             </div>
           </div>
           <div className="col-lg-1 order-lg-5 d-none d-lg-block"></div>
