@@ -1,1 +1,1 @@
-export { CheckIcon } from './SvgIcon';
+export { LogoIcon, YoutubeIcon, FacebookIcon, InstagramIcon, LinkedinIcon, CheckIcon } from './SvgIcon';

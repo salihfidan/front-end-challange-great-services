@@ -3,11 +3,14 @@ import Image from 'next/image';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 // images
-import logo from '../../public/img/logo.svg';
-import youtube from '../../public/img/youtube.svg';
-import facebook from '../../public/img/facebook.svg';
-import instagram from '../../public/img/instagram.svg';
-import linkedin from '../../public/img/linkedin.svg';
+// import logo from '../../public/img/logo.svg';
+// import youtube from '../../public/img/youtube.svg';
+// import facebook from '../../public/img/facebook.svg';
+// import instagram from '../../public/img/instagram.svg';
+// import linkedin from '../../public/img/linkedin.svg';
+
+// icons
+import { LogoIcon, YoutubeIcon, FacebookIcon, InstagramIcon, LinkedinIcon, CheckIcon } from '../SvgIcon';
 
 // component styling
 import styles from './Header.module.scss';
@@ -29,7 +32,8 @@ const Header = () => {
     <header className={`${styles.header} ${isScrolled ? styles['header--scrolled'] : ''} ${isMobileMenuOpened ? styles['header--menu-opened'] : ''}`}>
       <div className={`container-xxl ${styles['header__inner']}`}>
         <div className={styles['header__logo']}>
-          <Image src={logo} alt="GREAT Services" layout="fill" />
+          <LogoIcon />
+          {/* <Image src={logo} alt="GREAT Services" layout="fill" /> */}
         </div>
         <nav className={`${styles['header__nav']} d-none d-lg-block`}>
           <ul className={styles['header__nav-list']}>
@@ -53,7 +57,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <button className={`${styles['header__button']} d-lg-none`} onClick={() => setIsMobileMenuOpened(!isMobileMenuOpened)}>
+        <button className={`${styles['header__button']} d-lg-none`} onClick={() => setIsMobileMenuOpened(!isMobileMenuOpened)} aria-label="Menu">
           <span></span>
           <span></span>
           <span></span>
@@ -88,22 +92,26 @@ const Header = () => {
           <ul className={styles['header__social-nav-list']}>
             <li className={styles['header__social-nav-item']}>
               <a href="#" className={styles['header__social-nav-link']}>
-                <Image src={youtube} alt="Youtube" className={styles['header__social-nav-logo']} />
+                {/* <Image src={youtube} alt="Youtube" className={styles['header__social-nav-logo']} /> */}
+                <YoutubeIcon />
               </a>
             </li>
             <li className={styles['header__social-nav-item']}>
               <a href="#" className={styles['header__social-nav-link']}>
-                <Image src={facebook} alt="Facebook" className={styles['header__social-nav-logo']} />
+                <FacebookIcon />
+                {/* <Image src={facebook} alt="Facebook" className={styles['header__social-nav-logo']} /> */}
               </a>
             </li>
             <li className={styles['header__social-nav-item']}>
               <a href="#" className={styles['header__social-nav-link']}>
-                <Image src={instagram} alt="Instagram" className={styles['header__social-nav-logo']} />
+                {/* <Image src={instagram} alt="Instagram" className={styles['header__social-nav-logo']} /> */}
+                <InstagramIcon />
               </a>
             </li>
             <li className={styles['header__social-nav-item']}>
               <a href="#" className={styles['header__social-nav-link']}>
-                <Image src={linkedin} alt="LinkedIn" className={styles['header__social-nav-logo']} />
+                <LinkedinIcon />
+                {/* <Image src={linkedin} alt="LinkedIn" className={styles['header__social-nav-logo']} /> */}
               </a>
             </li>
           </ul>

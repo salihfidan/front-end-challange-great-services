@@ -14,7 +14,7 @@ import ServiceCard from '../ServiceCard';
 
 const InfiniteServices = () => {
   const viewMoreButtonRef = useRef();
-  // const inViewport = useIntersection(viewMoreButtonRef);
+  const inViewport = useIntersection(viewMoreButtonRef);
   const PAGE_SIZE = 12;
   const { data, error, size, setSize } = useSWRInfinite((index) => `api/services/${index * PAGE_SIZE}/${PAGE_SIZE}`, fetcher);
 
@@ -24,9 +24,9 @@ const InfiniteServices = () => {
   const isEmpty = data?.[0]?.length === 0;
   const isReachingEnd = isEmpty || (data && data[data.length - 1]?.length < PAGE_SIZE);
 
-  // useEffect(() => {
-  //   if (inViewport && !isLoadingMore && !isReachingEnd) setSize(size + 1);
-  // }, [inViewport, isLoadingMore, isReachingEnd]);
+  useEffect(() => {
+    if (inViewport && !isLoadingMore && !isReachingEnd) setSize(size + 1);
+  }, [inViewport, isLoadingMore, isReachingEnd]);
 
   return (
     <>

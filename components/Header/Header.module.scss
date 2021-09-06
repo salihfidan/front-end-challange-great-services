@@ -57,7 +57,8 @@
 
   &__logo {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     width: 74px;
     height: 16px;
 

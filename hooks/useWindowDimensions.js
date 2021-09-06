@@ -8,7 +8,7 @@ function getWindowDimensions() {
   };
 }
 
-export default function useWindowDimensions() {
+function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 1000 });
 
   useEffect(() => {
@@ -24,3 +24,5 @@ export default function useWindowDimensions() {
 
   return windowDimensions;
 }
+
+export default useWindowDimensions;

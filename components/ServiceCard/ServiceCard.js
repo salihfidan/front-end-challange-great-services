@@ -10,7 +10,7 @@ const ServiceCard = ({ title, icon, people, category, isLoading }) => {
     people = people ? [...people].reverse() : [];
   });
 
-  if (isLoading)
+  if (isLoading || !icon)
     return (
       <div className={styles['service-card']}>
         <div className={styles['service-card__img-container']}>
@@ -52,7 +52,7 @@ const ServiceCard = ({ title, icon, people, category, isLoading }) => {
       </div>
     );
 
-  if (!icon) return <span>Sorun</span>;
+  // if (!icon) return <span>Sorun</span>;
 
   return (
     <div className={styles['service-card']}>
