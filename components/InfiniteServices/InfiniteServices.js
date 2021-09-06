@@ -16,7 +16,7 @@ const InfiniteServices = () => {
   const viewMoreButtonRef = useRef();
   const inViewport = useIntersection(viewMoreButtonRef);
   const PAGE_SIZE = 12;
-  const { data, error, size, setSize } = useSWRInfinite((index) => `api/services/${index * PAGE_SIZE}/${PAGE_SIZE}`, fetcher);
+  const { data, error, size, setSize } = useSWRInfinite((index) => `https://basework-frontend-case-api.herokuapp.com/services/${index * PAGE_SIZE}/${PAGE_SIZE}`, fetcher);
 
   const services = data ? [].concat(...data) : [];
   const isLoadingInitialData = !data && !error;
