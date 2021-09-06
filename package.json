@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3005",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3005",
+    "start": "next start -p $PORT",
     "lint": "next lint",
     "stylelint": "stylelint \"**/*.scss\" --syntax scss",
     "stylelint:fix": "stylelint \"**/*.scss\" --syntax scss --fix"
