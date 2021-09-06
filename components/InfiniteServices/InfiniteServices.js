@@ -26,7 +26,7 @@ const InfiniteServices = () => {
 
   useEffect(() => {
     if (inViewport && !isLoadingMore && !isReachingEnd) setSize(size + 1);
-  }, [inViewport, isLoadingMore, isReachingEnd]);
+  }, [inViewport, isLoadingMore, isReachingEnd, size, setSize]);
 
   return (
     <>

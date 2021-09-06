@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import ContentLoader from 'react-content-loader';
 
@@ -6,9 +6,11 @@ import ContentLoader from 'react-content-loader';
 import styles from './ServiceCard.module.scss';
 
 const ServiceCard = ({ title, icon, people, category, isLoading }) => {
+  const [_people, _setPeople] = useState([]);
+
   useEffect(() => {
-    people = people ? [...people].reverse() : [];
-  });
+    if (people) _setPeople([...people].reverse());
+  }, [people]);
 
   if (isLoading || !icon)
     return (
@@ -65,7 +67,7 @@ const ServiceCard = ({ title, icon, people, category, isLoading }) => {
       <div className={styles['service-card__expert-area']}>
         <div className={styles['service-card__expert-title']}>{category}</div>
         <div className={styles['service-card__expert-images']}>
-          {people.map((person) => {
+          {_people.map((person) => {
             return (
               <div className={styles['service-card__expert-img']} key={person.name}>
                 <Image loader={({ src }) => src} unoptimized src={person.avatar} alt={person.name} layout="fill" objectFit="cover" />
@@ -74,8 +76,8 @@ const ServiceCard = ({ title, icon, people, category, isLoading }) => {
           })}
         </div>
         <div className={styles['service-card__expert-names']}>
-          {people
-            ?.map((person) => person.name)
+          {_people
+            .map((person) => person.name)
             .reverse()
             .join(' + ')}
         </div>
