@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>{pageTitle}</title>
+        <title>{pageTitle} - Great</title>
         <meta name="description" content={pageDescription} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
