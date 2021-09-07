@@ -41,7 +41,7 @@ const InfiniteServices = () => {
           ? [...new Array(PAGE_SIZE)].map((_, i) => {
               return (
                 <div className="col-6 col-md-4 col-lg-3 col-xxl-2 mt-6 mt-md-9" key={i}>
-                  <ServiceCard isLoading={true} key={i}/>
+                  <ServiceCard isLoading={true} count={i} />
                 </div>
               );
             })
