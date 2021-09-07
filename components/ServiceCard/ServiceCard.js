@@ -12,6 +12,10 @@ const ServiceCard = ({ title, icon, people, category, isLoading }) => {
     if (people) _setPeople([...people].reverse());
   }, [people]);
 
+  const replaceHttp = (link) => {
+    return link.replace('http://', 'https://');
+  };
+
   if (isLoading || !icon)
     return (
       <div className={styles['service-card']}>
@@ -60,7 +64,7 @@ const ServiceCard = ({ title, icon, people, category, isLoading }) => {
     <div className={styles['service-card']}>
       <div className={styles['service-card__img-container']}>
         <div className={styles['service-card__img']}>
-          <Image loader={({ src }) => src} unoptimized src={icon} alt="GREAT Services" layout="fill" />
+          <Image src={replaceHttp(icon)} alt="GREAT Services" layout="fill" />
         </div>
       </div>
       <div className={styles['service-card__title']}>{title}</div>
@@ -70,7 +74,7 @@ const ServiceCard = ({ title, icon, people, category, isLoading }) => {
           {_people.map((person) => {
             return (
               <div className={styles['service-card__expert-img']} key={person.name}>
-                <Image loader={({ src }) => src} unoptimized src={person.avatar} alt={person.name} layout="fill" objectFit="cover" />
+                <Image src={replaceHttp(person.avatar)} alt={person.name} layout="fill" objectFit="cover" />
               </div>
             );
           })}
