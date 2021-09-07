@@ -1,12 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import useSWRInfinite from 'swr/infinite';
-// import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 // helpers
 import fetcher from '../../helpers/fetcher';
 
 // hooks
-// import useWindowDimensions from '../../hooks/useWindowDimensions';
 import useIntersection from '../../hooks/useIntersection';
 
 // components

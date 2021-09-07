@@ -1,6 +1,15 @@
 {
-  "extends": "stylelint-config-sass-guidelines",
+  "extends": ["stylelint-config-sass-guidelines", "stylelint-config-rational-order"],
   "rules": {
-    "max-nesting-depth": 3
+    "max-nesting-depth": 3,
+    "order/properties-alphabetical-order": null,
+    "order/properties-order": [],
+    "plugin/rational-order": [
+      true,
+      {
+        "border-in-box-model": false,
+        "empty-line-between-groups": false
+      }
+    ]
   }
 }

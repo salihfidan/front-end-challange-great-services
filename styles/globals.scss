@@ -4,13 +4,13 @@
 html,
 body {
   color: $color-dark;
-  font-family: CircularStd, sans-serif;
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
+  font-family: CircularStd, sans-serif;
   line-height: 1.5;
 }
 
 .container-xxl {
-  padding-left: $container-padding;
   padding-right: $container-padding;
+  padding-left: $container-padding;
 }

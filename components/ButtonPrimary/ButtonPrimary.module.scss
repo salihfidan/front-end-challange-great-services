@@ -1,11 +1,11 @@
 @import '../../styles/modules';
 
 .button-primary {
-  background-color: $color-dark;
-  border-radius: 70px;
+  padding: 10px 37px 13px;
   color: #fff;
   font-size: 18px;
-  padding: 10px 37px 13px;
+  background-color: $color-dark;
+  border-radius: 70px;
 
   &,
   &:link {
@@ -13,7 +13,7 @@
   }
 
   &:hover {
-    border-color: $color-dark;
     color: #fff;
+    border-color: $color-dark;
   }
 }

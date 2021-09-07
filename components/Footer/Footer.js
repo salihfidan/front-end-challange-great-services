@@ -14,12 +14,12 @@ const Footer = () => {
           <div className="col-lg-6">
             <div className={styles['footer__text']}>Get to know our hiring process before you apply or find answers to any lingering questions, right here, right now.</div>
           </div>
-          <div className="col-lg-5 text-lg-right">
+          <div className="col-lg-6 col-xl-5 text-lg-right">
             <a href="#" className={styles['footer__action']}>
               Join
             </a>
           </div>
-          <div className="col-lg-1 d-none d-lg-block"></div>
+          <div className="col-lg-1 d-none d-xl-block"></div>
         </div>
       </div>
       <div className="container-xxl">

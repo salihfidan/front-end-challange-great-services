@@ -1,0 +1,16 @@
+@mixin footer-text {
+  color: #fff;
+  font-weight: 300;
+  opacity: 0.8;
+
+  &:link,
+  &:link:hover {
+    color: #fff;
+  }
+}
+
+@mixin reset-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
