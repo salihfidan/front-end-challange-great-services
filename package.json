@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "next start",
     "lint": "next lint",
     "stylelint": "stylelint \"**/*.scss\" --syntax scss",
     "stylelint:fix": "stylelint \"**/*.scss\" --syntax scss --fix"
@@ -26,5 +26,18 @@
     "eslint-config-next": "11.1.2",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "iOS > 13",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
