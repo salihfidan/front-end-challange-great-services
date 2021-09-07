@@ -97,7 +97,6 @@
   }
 
   &__nav-item {
-    @include footer-text;
     font-size: 14px;
 
     @include media-breakpoint-up('lg') {
@@ -118,7 +117,6 @@
   }
 
   &__address-area {
-    @include footer-text;
     font-size: 14px;
 
     @include media-breakpoint-up('lg') {
@@ -131,6 +129,7 @@
   }
 
   &__address {
+    @include footer-text;
     max-width: 180px;
     margin-bottom: 20px;
 
