@@ -2,20 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import ContentLoader from 'react-content-loader';
 
+// helpers
+import replaceHttp from '../../helpers/replaceHttp';
+
 // component styling
 import styles from './ServiceCard.module.scss';
 
 const ServiceCard = ({ title, icon, people, category, isLoading, count }) => {
-  const [_people, _setPeople] = useState([]);
-
-  useEffect(() => {
-    if (people) _setPeople([...people].reverse());
-  }, [people]);
-
-  const replaceHttp = (link) => {
-    return link.replace('http://', 'https://');
-  };
-
   if (isLoading || !icon)
     return (
       <div className={styles['service-card']}>
@@ -69,7 +62,7 @@ const ServiceCard = ({ title, icon, people, category, isLoading, count }) => {
       <div className={styles['service-card__expert-area']}>
         <div className={styles['service-card__expert-title']}>{category}</div>
         <div className={styles['service-card__expert-images']}>
-          {_people.map((person) => {
+          {[...people.reverse()].map((person) => {
             return (
               <div className={styles['service-card__expert-img']} key={person.name}>
                 <Image src={replaceHttp(person.avatar)} alt={person.name} layout="fill" objectFit="cover" />
@@ -77,12 +70,7 @@ const ServiceCard = ({ title, icon, people, category, isLoading, count }) => {
             );
           })}
         </div>
-        <div className={styles['service-card__expert-names']}>
-          {_people
-            .map((person) => person.name)
-            .reverse()
-            .join(' + ')}
-        </div>
+        <div className={styles['service-card__expert-names']}>{[...people.reverse()].map((person) => person.name).join(' + ')}</div>
       </div>
     </div>
   );

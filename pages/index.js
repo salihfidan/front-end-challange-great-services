@@ -1,5 +1,8 @@
 import Head from 'next/head';
 
+// helpers
+import fetcher from '../helpers/fetcher';
+
 // components
 import Layout from '../components/Layout';
 import InfiniteServices from '../components/InfiniteServices';
@@ -10,7 +13,7 @@ import { CheckIcon } from '../components/SvgIcon';
 // page styling
 import styles from '../styles/pages/Home.module.scss';
 
-const Home = () => {
+const Home = ({ initialData }) => {
   const pageTitle = 'Services';
   const pageDescription = 'Experts covering your home’s needs from the right light bulb shade to remodeling.';
 
@@ -22,7 +25,7 @@ const Home = () => {
       </Head>
       <Layout pageTitle={pageTitle} pageDescription={pageDescription}>
         <div className="container-xxl">
-          <InfiniteServices />
+          <InfiniteServices initialData={initialData} />
         </div>
         <div className={styles.features}>
           <div className={styles['features__items']}>
@@ -109,6 +112,15 @@ const Home = () => {
       </Layout>
     </div>
   );
+};
+
+export const getStaticProps = async () => {
+  const initialServices = await fetcher('https://basework-frontend-case-api.herokuapp.com/services/0/12');
+  return {
+    props: {
+      initialData: initialServices,
+    },
+  };
 };
 
 export default Home;

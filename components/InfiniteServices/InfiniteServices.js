@@ -10,13 +10,13 @@ import useIntersection from '../../hooks/useIntersection';
 // components
 import ServiceCard from '../ServiceCard';
 
-const InfiniteServices = () => {
+const InfiniteServices = ({ initialData }) => {
   const viewMoreButtonRef = useRef();
   const inViewport = useIntersection(viewMoreButtonRef);
   const PAGE_SIZE = 12;
   const { data, error, size, setSize } = useSWRInfinite((index) => `https://basework-frontend-case-api.herokuapp.com/services/${index * PAGE_SIZE}/${PAGE_SIZE}`, fetcher);
 
-  const services = data ? [].concat(...data) : [];
+  const services = data ? [].concat(...data) : initialData;
   const isLoadingInitialData = !data && !error;
   const isLoadingMore = isLoadingInitialData || (size > 0 && data && typeof data[size - 1] === 'undefined');
   const isEmpty = data?.[0]?.length === 0;
