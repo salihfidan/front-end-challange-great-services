@@ -1,6 +1,6 @@
 ## Front End Challange - Great Services
 
-Deploy: [https://github.com/hamzafidan/front-end-challange-great-services](https://github.com/hamzafidan/front-end-challange-great-services)
+Deploy: [https://frontend-case-great-services.herokuapp.com/](https://frontend-case-great-services.herokuapp.com/)
 
 ### Used Technologies
 
